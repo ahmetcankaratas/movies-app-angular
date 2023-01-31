@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Movie } from '../../models/movie';
+import { IMAGES_SIZES } from '../../constants/images-sizes';
 
 @Component({
   selector: 'item',
@@ -9,5 +10,5 @@ import { Movie } from '../../models/movie';
 export class ItemComponent {
   @Input() itemData: Movie | null = null;
 
-  
+  imageSizes = IMAGES_SIZES;
 }

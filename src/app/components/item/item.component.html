@@ -6,9 +6,8 @@
       >/10
     </div>
     <div class="item-image">
-      <img [src]="'https://image.tmdb.org/t/p/original/' + itemData.poster_path" 
-      alt="" />
+      <img [src]="imageSizes.medium + itemData.poster_path" [alt]="itemData.title" alt="" />
     </div>
-    <div class="item-title">{{itemData.title}}</div>
+    <div class="item-title">{{ itemData.title }}</div>
   </a>
 </ng-container>
