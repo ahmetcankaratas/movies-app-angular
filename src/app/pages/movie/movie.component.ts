@@ -27,13 +27,13 @@ export class MovieComponent implements OnInit {
   getMovie(id: string) {
     this.moviesService.getMovie(id).subscribe((movieData) => {
       this.movie = movieData;
-      console.log(this.movie);
     });
   }
 
   getMovieVideos(id: string) {
     this.moviesService.getMovieVideos(id).subscribe((movieVideosData) => {
       this.movieVideos = movieVideosData;
+      console.log(movieVideosData);
     });
   }
 }
