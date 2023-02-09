@@ -46,10 +46,14 @@ export class TvComponent implements OnInit {
 
   paginate($event: any) {
     const pageNumber = $event.page + 1;
-    if (this.searchValue) {
-      this.getPagedTvShows(pageNumber, this.searchValue);
+    if (this.genreId) {
+      this.getTvShowsByGenre(this.genreId, pageNumber);
     } else {
-      this.getPagedTvShows(pageNumber);
+      if (this.searchValue) {
+        this.getPagedTvShows(pageNumber, this.searchValue);
+      } else {
+        this.getPagedTvShows(pageNumber);
+      }
     }
   }
 }

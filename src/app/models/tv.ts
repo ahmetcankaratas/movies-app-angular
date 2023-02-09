@@ -11,13 +11,13 @@ export interface Tv {
   overview: string;
   popularity: number;
   poster_path: string;
-  release_date: string;
+  first_air_date: string;
   name: string;
   video: boolean;
   vote_average: number;
   vote_count: number;
-  revenue: number;
-  runtime: number;
+  number_of_episodes: number;
+  number_of_seasons: number;
   status: string;
   genres: Genre[];
 }
@@ -43,7 +43,7 @@ export interface TvVideo {
 export interface TvImages {
   backdrops: {
     file_path: string;
-  };
+  }[];
 }
 
 export interface TvCredits {
@@ -61,7 +61,7 @@ export const mapTvShowToItem = (tvShow: Tv): Item => {
     vote_average: tvShow.vote_average,
     backdrop_path: tvShow.backdrop_path,
     vote_count: tvShow.vote_count,
-    release_date: tvShow.release_date,
+    release_date: tvShow.first_air_date,
     overview: tvShow.overview,
     routePath: '/tvshow/' + tvShow.id
   };

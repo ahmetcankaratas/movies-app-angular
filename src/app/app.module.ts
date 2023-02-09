@@ -21,6 +21,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { GenresComponent } from './pages/genres/genres.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { TvComponent } from './pages/tv-shows/tv-shows.component';
+import { TvshowComponent } from './pages/tvshow/tvshow.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { TvComponent } from './pages/tv-shows/tv-shows.component';
     MovieComponent,
     VideoEmbedComponent,
     GenresComponent,
-    TvComponent
+    TvComponent,
+    TvshowComponent
   ],
   imports: [
     BrowserModule,

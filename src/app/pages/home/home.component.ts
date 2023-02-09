@@ -3,7 +3,7 @@ import { mapMovieToItem, Movie } from '../../models/movie';
 import { MoviesService } from 'src/app/services/movies.service';
 import { Item } from 'src/app/components/item/item';
 import { TvService } from 'src/app/services/tv.service';
-import { mapTvShowToItem } from 'src/app/models/tv';
+import { Tv } from 'src/app/models/tv';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   popularMovies: Item[] = [];
   upcomingMovies: Item[] = [];
   topRatedMovies: Item[] = [];
-  popularTvShows: Item[] = [];
+  popularTvShows: Tv[] = [];
 
   constructor(private moviesService: MoviesService, private tvService: TvService) {}
 
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
       this.topRatedMovies = movies.map((movie) => mapMovieToItem(movie));
     });
     this.tvService.getTvShows('popular').subscribe((tvShows) => {
-      this.popularTvShows = tvShows.map((tvShow) => mapTvShowToItem(tvShow));
+      this.popularTvShows = tvShows;
     });
   }
 }
