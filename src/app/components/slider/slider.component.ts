@@ -1,7 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
 import { IMAGES_SIZES } from 'src/app/constants/images-sizes';
-import { Movie } from 'src/app/models/movie';
+import { Item } from '../item/item';
 
 @Component({
   selector: 'app-slider',
@@ -10,7 +10,7 @@ import { Movie } from 'src/app/models/movie';
   animations: [trigger('slideFade', [state('void', style({ opacity: 0 })), transition('void <=> *', [animate('1s')])])]
 })
 export class SliderComponent implements OnInit {
-  @Input() items: Movie[] = [];
+  @Input() items: Item[] = [];
   @Input() isBanner: boolean = false;
 
   currentSlideIndex: number = 0;

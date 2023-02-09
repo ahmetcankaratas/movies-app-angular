@@ -3,13 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Movie, MovieCredits, MovieDto, MovieImages, MovieVideoDto } from '../models/movie';
 import { of, switchMap } from 'rxjs';
 import { GenresDto } from '../models/genre';
-
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesService {
-  baseUrl: string = 'https://api.themoviedb.org/3';
-  apiKey: string = 'f18401a2d4366fa55a7a2d3876c9f14e';
+  baseUrl: string = environment.baseUrl;
+  apiKey: string = environment.apiKey;
 
   constructor(private http: HttpClient) {}
 
