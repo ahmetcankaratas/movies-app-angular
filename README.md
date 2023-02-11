@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
 
-LiveURL: 
+LiveURL: https://movies-app-can.surge.sh/
 
 ## **🔎 Technologies**
 
@@ -11,6 +11,11 @@ LiveURL:
 
 ## 📷 Screenshots
 <b>Homepage</b>
+![Screenshot-2023-02-11-at-21 52 26](https://user-images.githubusercontent.com/53529387/218276237-5de71d5f-944e-4615-a1a7-1619b7473502.jpeg)
+
+<b>Movies</b>
+
+<b>Details</b>
 
 ## Getting Started
 
